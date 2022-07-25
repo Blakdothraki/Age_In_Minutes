@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
                                                                  }, year, month, day)
         dpd.datePicker.setMaxDate(Date().time - 86400000)
-            dpd.show()
+        dpd.show()
     }
 
 }
