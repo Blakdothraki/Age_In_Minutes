@@ -1,85 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:paddingTop="80dp"
     android:padding="15dp"
     android:background="@color/offwhite"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="CALCULATE YOUR"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:padding="10dp"
-        android:text="AGE"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_dark"
-        android:textSize="20dp"
-        android:textStyle="italic"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="IN MINUTES😀"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        />
-    <Button
-        android:id="@+id/dateBtn"
+
+    <EditText
+        android:id="@+id/editDateAndTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Select Date Of Birth"
-        android:textColor="@color/button1"
-        android:textSize="20dp"
-        android:background="@color/white"
-        />
-    <TextView
-        android:id="@+id/selectedDateTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textColor="#844046"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Selected Date"
-        android:textColor="#B7B7B7"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:id="@+id/selectedDateInMinutesTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textColor="#844046"
-        android:textSize="35sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Age In Minutes"
-        android:textColor="#B7B7B7"
-        android:textSize="20sp"
-        />
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:onClick="openDateTimePicker"
+        android:hint="Choose DOB and Time"
+        android:inputType="textPersonName"
+        tools:ignore="TextFields" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_age"
+        android:onClick="calculateAge"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textColor="#6A210B"
+        android:visibility="gone"
+        android:layout_marginTop="35dp"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
 </LinearLayout>
